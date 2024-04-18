@@ -24,7 +24,7 @@ const Form = () => {
 
     return (
         <div className="flex flex-col m-auto pl-5 md:pl-0 md:p-5 md:mb-10 bg-white w-full md:h-[100vh] items-center justify-center">
-            {step === 1 && <PersonalInfo />}
+            {/* {step === 1 && <PersonalInfo />}
             {step === 2 && <LifeExpect />}
             {step === 3 && <Retirment1 />}
             {step === 4 && <Retirment2 />}
@@ -32,7 +32,8 @@ const Form = () => {
             <div className='flex flex-row w-[60%] pb-10'>
                 {step > 1 && <input type='button' value='Previous' onClick={handlePrevious} className='border-2 border-[#1dbe72] text-black hover:bg-[#1dbe72] hover:text-white text-lg p-[1%] px-[8%] mt-[5%] mr-[40%] rounded-md cursor-pointer' />}
                 <input type='submit' value='Next' onClick={handleNext} className={`flex border-2 border-[#1dbe72] text-black hover:bg-[#1dbe72] hover:text-white text-lg p-[1%] px-[8%] mt-[5%] rounded-md cursor-pointer ${step === 1 ? 'ml-[75%]' : ''}`} />
-             </div>
+             </div> */}
+        
         </div>
     );
 };
