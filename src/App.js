@@ -138,10 +138,10 @@ function App() {
         <h1 className='text-black text-xl w-[60%]'>Expected Return on Portfolio Post Retirement (%)</h1>
         <h1 className='text-black text-xl w-[30%]'>: {expectedReturnPortfolio}</h1>
       </div>
-      <div className='flex flex-row justify-between w-full'>
+      {/* <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Inflation Post Retirement (%)</h1>
         <h1 className='text-black text-xl w-[30%]'>: {expectedInflationRetirement}</h1>
-      </div>
+      </div> */}
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Retirement Corpus Needed</h1>
         <h1 className='text-black text-xl w-[30%]'>: {retirementCorpus}</h1>
