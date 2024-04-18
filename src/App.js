@@ -70,18 +70,18 @@ function App() {
         <h1 className='text-black text-xl w-[60%]'>Name</h1>
         <h1 className='text-black text-xl w-[30%]'>: {name}</h1>
       </div>
-      <div className='flex flex-row justify-between w-full'>
+      {/* <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Gender</h1>
           <h1 className='text-black text-xl w-[30%]'>: { gender }</h1>
-      </div>
+      </div> */}
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Current Age of Applicant</h1>
         <h1 className='text-black text-xl w-[30%]'>: {age}</h1>
       </div>
-      <div className='flex flex-row justify-between w-full'>
+      {/* <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Maritial Status</h1>
         <h1 className='text-black text-xl w-[30%]'>: {maritialstatus}</h1>
-      </div>
+      </div> */}
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Spouse Name</h1>
         <h1 className='text-black text-xl w-[30%]'>: {spouseName}</h1>
