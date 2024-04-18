@@ -3,16 +3,58 @@ import Main from './main';
 import Form from './form';
 import logo from './IMG_5409.png';
 import footer from './IMG_5410.png';
+import { useLocation } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import React from 'react';
 
 
 function App() {
-   const componentRef = React.useRef();
+  const componentRef = React.useRef();
+  const location = useLocation();
 
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
+
+   const query = new URLSearchParams(location.search);
+  const name = query.get('name');
+  const gender = query.get('gender');
+  const age = query.get('age');
+  const maritialstatus = query.get('maritialstatus');
+  const spouseName = query.get('spousename');
+  const spouseAge = query.get('spouseage');
+  const retirementAge = query.get('retirementage');
+  const retirementSpouseAge = query.get('retirementSpouseAge');
+  const lifeExpectancy = query.get('lifeExpectancy');
+  const spouseLifeExpectancy = query.get('spouseLifeExpectancy');
+  const ExpectedInflationGoal = query.get('ExpectedInflationGoal');
+  const periodLeft = query.get('periodLeft');
+  const monthlyRetirementCost = query.get('monthlyRetirementCost');
+  const infulationAdjustedAmount = query.get('infulationAdjustedAmount');
+  const monthlyIncomeReverseMortgage = query.get('monthlyIncomeReverseMortgage');
+  const monthlyIncomeRequirement = query.get('monthlyIncomeRequirement');
+  const numberYearsIncomeRequired = query.get('numberYearsIncomeRequired');
+  const expectedReturnPortfolio = query.get('expectedReturnPortfolio');
+  const expectedInflationRetirement = query.get('expectedInflationRetirement');
+  const retirementCorpus = query.get('retirementCorpus');
+  const investmentsEPF = query.get('investmentsEPF');
+  const annualContribution = query.get('annualContribution');
+  const expectedAverageEPF = query.get('expectedAverageEPF');
+  const corpusatRetirement = query.get('corpusatRetirement');
+  const netValueProperty = query.get('netValueProperty');
+  const expectedReturnProperty = query.get('expectedReturnProperty');
+  const valueOfProperty = query.get('valueOfProperty');
+  const valueOfSharesForRetirement = query.get('valueOfSharesForRetirement');
+  const expectedReturnOnShares = query.get('expectedReturnOnShares');
+  const valueOfShares = query.get('valueOfShares');
+  const balanceOfCorpusAccumulated = query.get('balanceOfCorpusAccumulated');
+  const monthlySIP = query.get('monthlySIP');
+  const expectedAnnualIncreaseInMonthlyInvestment = query.get('expectedAnnualIncreaseInMonthlyInvestment');
+  const monthlySIPPerAnnum = query.get('monthlySIPPerAnnum');
+  const lumpSum = query.get('lumpSum');
+  
+
+
   return (
     <div className="flex flex-col gap-16">
       {/* <div className='fixed w-full md:w-[30%] h-[10%] md:h-full'>
@@ -26,143 +68,143 @@ function App() {
       <h1 className='text-black text-center text-6xl pb-10'>Report</h1>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Name</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {name}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Gender</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Male</h1>
+          <h1 className='text-black text-xl w-[30%]'>: { gender }</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Current Age of Applicant</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {age}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Maritial Status</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {maritialstatus}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Spouse Name</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {spouseName}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Current Age of Spouse</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {spouseAge}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Retirement Age of of Applicant</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {retirementAge}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Age of Spouse at the Time of Applicant's Retirement</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {retirementSpouseAge}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Life Expectancy of Applicant</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {lifeExpectancy}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Life Expectancy of Spouse</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {spouseLifeExpectancy}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Inflation for this Goal (%)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {ExpectedInflationGoal}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Period Left</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {periodLeft}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Monthly Retirement Expenses @ Current Cost</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {monthlyRetirementCost}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Inflation Adjusted Amount at Retirement</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {infulationAdjustedAmount}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Monthly Income from Reverse Mortgage (only indicative)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {monthlyIncomeReverseMortgage}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Monthly income requirement at retirement</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {monthlyIncomeRequirement}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Number of Years for which Income is Required</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {numberYearsIncomeRequired}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Return on Portfolio Post Retirement (%)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {expectedReturnPortfolio}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Inflation Post Retirement (%)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {expectedInflationRetirement}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Retirement Corpus Needed</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {retirementCorpus}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Existing Investments in EPF, Super Annuation, PPF, NPS etc.</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {investmentsEPF}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Annual Contribution</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {annualContribution}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Average Return in EPF, Super Annuation, PPF, NPS etc. (%)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {expectedAverageEPF}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Value of this Corpus at Retirement</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {corpusatRetirement}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Net value of property/Asset earmarked for this goal</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {netValueProperty}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected return on property/asset (%)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {expectedReturnProperty}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Value of Property/Asset at Retirement</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {valueOfProperty}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Value of Shares and MFs meant for retirement</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {valueOfSharesForRetirement}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Return on Shares and MFs meant for Retirement (%)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {expectedReturnOnShares}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Value of Shares and MFs at Retirement</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {valueOfShares}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Balance of Corpus to be Accumulated</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {balanceOfCorpusAccumulated}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Monthly SIP Required</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {monthlySIP}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Expected Annual Increase in Monthly Investment (%)</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {expectedAnnualIncreaseInMonthlyInvestment}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Monthly SIP Amount with Topup @ 10% Per Annum</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {monthlySIPPerAnnum}</h1>
       </div>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[60%]'>Lump sum</h1>
-        <h1 className='text-black text-xl w-[30%]'>: Sai</h1>
+        <h1 className='text-black text-xl w-[30%]'>: {lumpSum}</h1>
       </div>
       <img src={footer} className='w-[100%] h-[10%] m-auto' />
       </div>
