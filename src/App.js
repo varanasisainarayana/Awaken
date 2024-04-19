@@ -396,7 +396,7 @@ function App() {
         <h1 className='text-black text-lg w-[70%] border border-black px-[3%] py-[0.3%] border-r-0'>Lump sum</h1>
         <h1 className='text-black text-lg w-[30%] border border-black px-[2%] py-[0.3%] font-medium'> {lumpSum}</h1>
       </div>
-          <div className='flex flex-col items-center justify-center w-[50%] mt-[5%]'>
+          <div className='flex flex-col items-center justify-center w-[75%] mt-[5%]'>
             <h1 className='text-2xl font-bold my-[2%]'>Retirement - Accumulation</h1>
           <BarChart></BarChart>
           </div>
