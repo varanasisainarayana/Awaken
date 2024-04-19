@@ -66,7 +66,7 @@ function App() {
       </div> */}
       <div className="flex w-[100%] justify-center flex-col" ref={componentRef}>
         <img src={logo} className='w-[100%] h-[10%] m-auto' />
-        <div className='flex flex-col items-center justify-end px-[20%] w-[100%]'>
+        <div className='flex flex-col items-center justify-end px-[10%] w-[100%]'>
       <h1 className='text-black text-center text-5xl pb-10'>Report</h1>
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[70%] border border-black px-[3%] py-[0.5%] border-b-0 border-r-0'>Name</h1>
