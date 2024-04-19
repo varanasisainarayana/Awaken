@@ -72,18 +72,18 @@ function App() {
         <h1 className='text-black text-xl w-[70%] border border-black px-[3%] py-[0.5%] border-b-0 border-r-0'>Name</h1>
         <h1 className='text-black text-xl w-[30%] border border-black px-[2%] py-[0.5%] border-b-0 font-medium'>{name}</h1>
       </div>
-      <div className='flex flex-row justify-between w-full'>
+      {/* <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[70%] border border-black px-[3%] py-[0.5%] border-b-0 border-r-0'>Gender</h1>
           <h1 className='text-black text-xl w-[30%] border border-black px-[2%] py-[0.5%] border-b-0 font-medium'> { gender }</h1>
-      </div>
+      </div> */}
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[70%] border border-black px-[3%] py-[0.5%] border-b-0 border-r-0'>Current Age of Applicant</h1>
         <h1 className='text-black text-xl w-[30%] border border-black px-[2%] py-[0.5%] border-b-0 font-medium'> {age}</h1>
       </div>
-      <div className='flex flex-row justify-between w-full'>
+      {/* <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[70%] border border-black px-[3%] py-[0.5%] border-b-0 border-r-0'>Maritial Status</h1>
         <h1 className='text-black text-xl w-[30%] border border-black px-[2%] py-[0.5%] border-b-0 font-medium'> {maritialstatus}</h1>
-      </div>
+      </div> */}
       <div className='flex flex-row justify-between w-full'>
         <h1 className='text-black text-xl w-[70%] border border-black px-[3%] py-[0.5%] border-b-0 border-r-0'>Spouse Name</h1>
         <h1 className='text-black text-xl w-[30%] border border-black px-[2%] py-[0.5%] border-b-0 font-medium'> {spouseName}</h1>
