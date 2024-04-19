@@ -401,7 +401,7 @@ function App() {
           <BarChart></BarChart>
           </div>
         </div>
-        <div className='footer mt-[5%]'>
+        <div className='footer mt-[7%]'>
           <img src={footer} className='w-[100%] h-[10%] m-auto' />
           </div>
       </div>
