@@ -215,7 +215,7 @@ function App() {
           </div>
       <img src={footer} className='w-[100%] h-[10%] m-auto' />
       </div>
-      <button onClick={handlePrint} className='bg-[#1dbe72] text-white text-2xl p-5 w-[20%] rounded-md m-auto'>Download PDF</button>
+      <button onClick={handlePrint} className='bg-[#1dbe72] text-white text-2xl p-5 w-[30%] rounded-md m-auto'>Download PDF</button>
     </div>
   );
 }
