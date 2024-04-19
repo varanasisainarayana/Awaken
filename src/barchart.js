@@ -16,13 +16,13 @@ function BarChart() {
     const valueOfSharesForRetirement = query.get('valueOfSharesForRetirement');
     const balanceOfCorpusAccumulated = query.get('balanceOfCorpusAccumulated');
 
-    const rc = Number(retirementCorpus);
-    const second = Number(corpusatRetirement) + Number(valueOfSharesForRetirement);
-    const third = Number(balanceOfCorpusAccumulated);
+    const rc = parseInt(retirementCorpus);
+    const second = parseInt(corpusatRetirement) + parseInt(valueOfSharesForRetirement);
+    const third = parseInt(balanceOfCorpusAccumulated);
 
 
   const data = {
-    labels: ['Red', 'Blue', 'Green'],
+    labels: ['Retirement Corpis', 'Existing Investments', 'Corpus Balence'],
     datasets: [
       {
         label: '# of Votes',
