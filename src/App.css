@@ -42,3 +42,20 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media print {
+    .header {
+        position: running(header);
+    }
+    .footer {
+        position: running(footer);
+    }
+    @page {
+        @top-center {
+            content: element(header);
+        }
+        @bottom-center {
+            content: element(footer);
+        }
+    }
+}
