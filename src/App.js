@@ -27,12 +27,12 @@ function App() {
 
     setTimeout(() => {
       handlePrint();
-    }, 1000);
+    }, 2000);
 
     setTimeout(() => {
       setshowHide("hidden");
     }
-    , 2000);
+    , 3000);
     
   }
 
