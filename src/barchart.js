@@ -11,16 +11,19 @@ function BarChart() {
   const location = useLocation();
 
     const query = new URLSearchParams(location.search);
-    const retirementCorpus = query.get('retirementCorpus');
-    const corpusatRetirement = query.get('corpusatRetirement');
-    console.log(corpusatRetirement);
-    const valueOfSharesForRetirement = query.get('valueOfShares');
-    console.log(valueOfSharesForRetirement);
-    const balanceOfCorpusAccumulated = query.get('balanceOfCorpusAccumulated');
+  const retirementCorpus = query.get('retirementCorpus').replace(/,/g, '');
+  console.log(retirementCorpus, 'rc');
+    const corpusatRetirement = query.get('corpusatRetirement').replace(/,/g, '');
+    console.log(corpusatRetirement,'cr');
+    const valueOfSharesForRetirement = query.get('valueOfShares').replace(/,/g, '');
+    console.log(valueOfSharesForRetirement,'vsr');
+  const balanceOfCorpusAccumulated = query.get('balanceOfCorpusAccumulated').replace(/,/g, '');
+  console.log(balanceOfCorpusAccumulated, 'bca');
 
     const rc = parseInt(retirementCorpus);
+    
     const second = parseInt(corpusatRetirement) + parseInt(valueOfSharesForRetirement);
-    console.log(second);
+    console.log(second,'second');
     const third = parseInt(balanceOfCorpusAccumulated);
 
 
